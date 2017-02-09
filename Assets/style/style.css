@@ -1,0 +1,20 @@
+.list{
+    padding: 10px;
+    
+}
+*{
+   background-color:aliceblue; 
+    margin:10px;
+    
+}
+footer {
+text-align: center;
+    
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  background-color: white;
+  width: 100%;
+  background-color: coral;
+}
