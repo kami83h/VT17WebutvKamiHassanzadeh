@@ -1,0 +1,23 @@
+
+table{
+   
+    width: 90%;
+    background-color:beige;
+    border: 5px;
+    
+    border-style: none none solid solid;
+    box-shadow: 7px 5px 2px #cccccc;
+    border-bottom-right-radius: 15px;
+    margin: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+    
+}
+td,th{
+    border: 10px;
+    text-align: left;
+    padding: :9px;
+}
+tr:nth-child(odd){
+    background-color: darkgray;
+}
