@@ -13,10 +13,15 @@ table{
     margin-left: 50px;
     
 }
+th{
+    background-color: black;
+    color: aliceblue
+}
 td,th{
     border: 10px;
     text-align: left;
     padding: :9px;
+    
 }
 tr:nth-child(odd){
     background-color: darkgray;
