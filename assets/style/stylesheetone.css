@@ -20,7 +20,7 @@ th{
 td,th{
     border: 10px;
     text-align: left;
-    padding: :9px;
+    padding:9px;
     
 }
 tr:nth-child(odd){

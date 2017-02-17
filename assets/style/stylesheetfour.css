@@ -1,0 +1,50 @@
+*{
+	background-color:bisque;
+}
+div{
+	border: 0px;
+	margin: 0px;
+	background-color: aquamarine;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	animation: one 4s infinite;
+	border:1px solid black;
+	animation-timing-function: linear;
+}
+
+
+#div1 {animation-name: two;animation-timing-function: cubic-bezier(.42, 0, .38, 1);}
+#div2 {animation-iteration-count: 2;}
+#div3 {animation-duration: 20s;}
+#div4 {animation-delay: 1s;}
+#div5 {animation-play-state:paused;}
+#div6 {animation-name: two;}
+#div7 {animation: tre 5s linear infinite alternate;}
+#div8 {animation-name: tre;}
+#div9 {animation-direction: alternate-reverse;}
+#div10 {animation-name: tre; animation-duration: 1s;}
+#p5 {animation: four 4s infinite;}
+@keyframes one {
+	0%, 100% {transform: translate(0, 0);}
+	50% {transform: translate(500px, 0);}
+	80% {transform: translate(-500px, 0);}
+}
+
+@keyframes two {
+	0%   {background-color:brown; left:200px;top:200px;border-radius:100%;transform: scale(.3);}
+	25%  {background-color:yellow; left:400px; top:200px;transform: scale(1);}
+	50%  {background-color:chartreuse; left:400px; top:100px;transform: scale(2.5);}
+	75%  {background-color:green; left:200px; top:100px;transform: scale(1);}
+	100% {background-color:red; left:200px; top:200px;border-radius:0%;transform: scale(.3);}
+}
+
+@keyframes tre {
+	from {border-radius: 100%; border: 1px solid yellow;height: 50px; width: 50px;}
+	to {border-radius: 0%; border: 10px solid black; height: 80px;width: 100px;margin: 10px;}
+}
+@keyframes four{
+	0%{margin-left: 70%;color: yellow;}
+	100%{color:red;font-size: 25px;}
+}
