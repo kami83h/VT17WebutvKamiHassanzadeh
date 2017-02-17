@@ -11,7 +11,7 @@ div{
 	position: relative;
 	animation: one 4s infinite;
 	border:1px solid black;
-	animation-timing-function: linear;
+	animation-timing-function: linear; 
 }
 
 
