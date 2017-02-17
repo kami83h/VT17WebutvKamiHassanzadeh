@@ -25,7 +25,8 @@ div{
 #div8 {animation-name: tre;}
 #div9 {animation-direction: alternate-reverse;}
 #div10 {animation-name: tre; animation-duration: 1s;}
-#p5 {animation: four 4s infinite;}
+#p {animation: four 4s infinite;}
+
 @keyframes one {
 	0%, 100% {transform: translate(0, 0);}
 	50% {transform: translate(500px, 0);}
