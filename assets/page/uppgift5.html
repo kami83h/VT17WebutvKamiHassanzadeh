@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Validator</title>
+	<link rel="stylesheet" type="text/css" href="../style/stylesheetfive.css">
+</head>
+<body>
+
+
+<article class="container">
+	<h1 class="container__title">Text Valideringar</h1>
+	<form class="validation__form">
+		<hr>
+		<label>Skriv person nummer: (endast 10 siffror)</label><br>
+		
+		<input type="text" id="idNumber" class="validation__input">
+		<label>
+			<button type="button" onclick="myFunction1()">Test Input</button>
+			<br>Result: <p class="validation__result" id="idNumberResult"></p>
+	
+		</label>
+
+		<hr>
+		<label>Skottår: </label><br>
+		<input type="text" id="leapYear" class="validation__input">
+		<label>
+			
+			<button type="button" onclick="myFunction2()">Test Input</button>
+			<br>Result: <p class="validation__result" id="leapYearResult"></p>
+	
+		</label>
+		
+		<hr>
+		<label>Siffersumma: </label><br>
+		<input type="text" id="numberSum" class="validation__input">
+		<label>
+			<button type="button" onclick="myFunction3()">Test Input</button>
+			<br>Result: <p class="validation__result" id="numberSumResult"></p>
+			
+		</label>
+	</form>
+</article>
+
+<script type="text/javascript" src="../script/scriptuppgift5.js"></script>
+</body>
+</html>

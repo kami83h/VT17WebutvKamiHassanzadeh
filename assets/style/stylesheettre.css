@@ -19,11 +19,12 @@ header{
 
 }
 aside{
+	position: relative;
 	float: left;
+	display:inline-block;
 	width: 160px;
 	background-color:darkseagreen;
 	padding: 10px;
-
 }
 
 main{
