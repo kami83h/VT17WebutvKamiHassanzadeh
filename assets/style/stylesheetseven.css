@@ -44,14 +44,14 @@ footer {
 }
 
 ul>li{
-	
+
 	padding: 5px;
 	margin: 5px;
 	background-color: aliceblue;
 	border: 1px solid black;
 }
 .nav ul {
-	
+
 	list-style-type: none;
 	padding: 0;
 }
@@ -74,54 +74,71 @@ h3{
 	color: back; 
 	text-shadow: 1px 1px white;
 }
+img{
+	width: 400px;
+}
+figure{
+	text-align: center;
+}
 
 @media all and (min-width: 768px) {
-	.nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
-	.main {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
-	footer {-webkit-order:3;order:3;}
+	.nav {
+		text-align:left;
+		flex:1 auto;
+		order:1;
+	}
+	.main {
+		flex:5 0px;
+		order:2;
+	}
+	footer {
+		order:3;
+	}
 }
-
-
+body{ 
+	margin: 20px; 
+}
+h1 { 
+	font-size: 1.5em; 
+	margin: 10px; 
+}
 /*Star Rating*/
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
-fieldset, label { margin: 0; padding: 0; }
-body{ margin: 20px; }
-h1 { font-size: 1.5em; margin: 10px; }
-
-/*Style for Star Rating */
-
-.rating { 
-	float: left;
-	background-color: black;
+.starRating:not(old){
+  display        : inline-block;
+  width          : 11em;
+  height         : 1.8em;
+  overflow       : hidden;
+  vertical-align : bottom;
 }
 
-.rating > input { display: none; } 
-.rating > label:before { 
-	margin: 7px;
-	font-size: 2em;
-	font-family: FontAwesome;
-	display: inline-block;
-	content: "\f005";
+.starRating:not(old) > input{
+  margin-right : -100%;
+  opacity      : 0;
 }
 
-.rating > .half:before { 
-	content: "\f089";
-	position: absolute;
+.starRating:not(old) > label{
+  display : block;
+  float: right;
+  position: relative;
+  background-image: url('../resource/star-off.svg');
+	background-repeat: repeat-y;
+  background-size : contain;
 }
 
-.rating > label { 
-	color: #ddd; 
-	float: right; 
+.starRating:not(old) > label:before{
+  content         : '';
+  display         : block;
+  width           : 1.5em;
+  height          : 1.5em;
+  background: url('../resource/star-on.svg');
+  background-size : contain;
+  opacity         : 0;
+  transition      : opacity 0.2s linear;
 }
 
-/* betygs skärnor */
-
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color:yellow;  } /* hover previous stars in list */
-
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: chocolate;  } 
+.starRating:not(old) > label:hover:before,
+.starRating:not(old) > label:hover ~ label:before,
+.starRating:not(:hover) > :checked ~ label:before{
+  opacity : 1;
+}
