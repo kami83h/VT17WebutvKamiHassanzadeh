@@ -2,13 +2,13 @@
 window.onload = loadDoc(); 
 
 function loadDoc() {
-	var displayElement = document.createElement('h3');
+	var displayElement = document.getElementById('text');
 	var body = document.getElementsByTagName('body')[0];
 
 	displayElement.id = "title";
 	displayElement.innerHTML = "Result: ";
 
-	body.appendChild(displayElement);
+	main.appendChild(displayElement);
 }
 
 

@@ -8,7 +8,7 @@ Object.defineProperty(obj, "toString", {
 	value: function() {
 		return this.title + ", " + this.description;
 	},
-	writable: false,
+	writable: true,
 	enumerable: false,
 	configurable: false
 });

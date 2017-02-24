@@ -38,7 +38,7 @@ function myFunction1() {
 		
 	}
 	catch(err) {
-		message.innerHTML = "Input is " + err;
+		message.innerHTML = "Input is: " + err;
 	}
 }
 
@@ -75,7 +75,6 @@ function myFunction3() {
 	try { 
 		throw sum;
 		if(isNaN(x)) throw "Not a number";
-
 	}
 	catch(err) {
 		message.innerHTML = "Input is: " + err;
