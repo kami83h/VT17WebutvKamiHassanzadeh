@@ -107,7 +107,7 @@ h1 {
 .starRating:not(old){
   display        : inline-block;
   width          : 11em;
-  height         : 1.8em;
+  height         : 3em;
   overflow       : hidden;
   vertical-align : bottom;
 }
