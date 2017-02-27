@@ -8,34 +8,36 @@ function myFunction1() {
 
 	try { 
 		if(x == "")  throw "is Empty";
-		if(isNaN(x)) throw "not a number";
-		
-		for(var i=0;i<x.length;i++){
+		if(isNaN(x)) throw "Fel(prova utan - eller.)";
+		if(x.length==10||x.length==12){
+			for(var i=0;i<x.length;i++){
 
-			if(x.length[i] %2){
-				if(x[i]*2 >=10){
-					sum += x[i]-9;
+				if(x.length[i] %2){
+					if(x[i]*2 >=10){
+						sum += x[i]-9;
+					}
+					else{
+						sum +=x[i]*2;
+					}
 				}
 				else{
-					sum +=x[i]*2;
+					if(x[i]*1 >=10){
+						sum +=x[i]-9;
+					}
+					else{
+						sum +=x[i]*1;
+					}
 				}
+			}
+			if(sum%2==0){
+				throw "This personal number is valid";
 			}
 			else{
-				if(x[i]*1 >=10){
-					sum +=x[i]-9;
-				}
-				else{
-					sum +=x[i]*1;
-				}
+				throw "This personal number is not valid";
 			}
+		}else{
+			alert("Fel! personnumer måste vara 10 eller 12 siffror.")
 		}
-		if(sum%2==0){
-			throw "This personal number is valid";
-		}
-		else{
-			throw "This personal number is not valid";
-		}
-		
 	}
 	catch(err) {
 		message.innerHTML = "Input is: " + err;
