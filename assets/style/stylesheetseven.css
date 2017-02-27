@@ -50,10 +50,8 @@ ul>li{
 	border: 1px solid black;
 }
 
-.navmain ul {
+ul {
 	list-style-type: none;
-	padding: 0;
-	margin: 0;
 }
 .nav ul a {
 	color: blue;
