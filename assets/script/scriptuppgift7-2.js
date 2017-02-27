@@ -27,15 +27,6 @@ document.getElementById("input").addEventListener("input", myFunction);
 		seven = numberseven/70 * value;
 
 		if(value==35||value==70){
-			document.getElementById("one").innerHTML = one.toFixed(0);
-			document.getElementById("two").innerHTML = two.toFixed(0);
-			document.getElementById("tre").innerHTML = tre.toFixed(0);
-			document.getElementById("four").innerHTML = four.toFixed(0);
-			document.getElementById("five").innerHTML = five.toFixed(0);
-			document.getElementById("sex").innerHTML = sex.toFixed(0);
-			document.getElementById("seven").innerHTML = seven.toFixed(0);
-		}
-		else{
 			document.getElementById("one").innerHTML = one.toFixed(1);
 			document.getElementById("two").innerHTML = two.toFixed(1);
 			document.getElementById("tre").innerHTML = tre.toFixed(1);
@@ -43,5 +34,14 @@ document.getElementById("input").addEventListener("input", myFunction);
 			document.getElementById("five").innerHTML = five.toFixed(1);
 			document.getElementById("sex").innerHTML = sex.toFixed(1);
 			document.getElementById("seven").innerHTML = seven.toFixed(1);
+		}
+		else{
+			document.getElementById("one").innerHTML = one.toFixed(2);
+			document.getElementById("two").innerHTML = two.toFixed(2);
+			document.getElementById("tre").innerHTML = tre.toFixed(2);
+			document.getElementById("four").innerHTML = four.toFixed(2);
+			document.getElementById("five").innerHTML = five.toFixed(2);
+			document.getElementById("sex").innerHTML = sex.toFixed(2);
+			document.getElementById("seven").innerHTML = seven.toFixed(2);
 		}
 	}
