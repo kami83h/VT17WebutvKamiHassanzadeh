@@ -4,44 +4,56 @@ function myFunction1() {
 	message = document.getElementById("idNumberResult");
 	message.innerHTML = "";
 	var x = document.getElementById("idNumber").value;
-	var sum=-1;
+	var sum=0;
 
 	try { 
 		if(x == "")  throw "is Empty";
 		if(isNaN(x)) throw "Fel(prova utan - eller.)";
-		if(x.length==10||x.length==12){
-			for(var i=0;i<x.length;i++){
+		if(x.length===10||x.length===10+1||x.length===12||x.length===12+1){
+			
+			if(x.length===10||x.length===10+1){
+						var n= x.slice(0,10);
+		}
+		else{
+			var n = x.slice(2,12);
+		}
 
-				if(x.length[i] %2){
-					if(x[i]*2 >=10){
-						sum += x[i]-9;
-					}
-					else{
-						sum +=x[i]*2;
-					}
+		for(var i=0;i<n.length;i++){
+			console.log(sum);
+			
+			var char = Number(n[i]);
+			if(i%2===0){
+				if(char*2 >=10){
+					char=char*2;
+					char= char-9;
+					sum +=char;
 				}
 				else{
-					if(x[i]*1 >=10){
-						sum +=x[i]-9;
-					}
-					else{
-						sum +=x[i]*1;
-					}
+					sum +=char*2;
 				}
 			}
-			if(sum%2==0){
-				throw "This personal number is valid";
-			}
 			else{
-				throw "This personal number is not valid";
+				if(char*1 >=10){
+					sum +=char-9;
+				}
+				else{
+					sum +=char*1;
+				}
 			}
-		}else{
-			alert("Fel! personnumer måste vara 10 eller 12 siffror.")
 		}
-	}
-	catch(err) {
-		message.innerHTML = "Input is: " + err;
-	}
+		if(sum%10==0){
+			throw "This personal number is valid";
+		}
+		else{
+			throw "This personal number is not valid";
+		}
+	}/*else{
+			alert("Fel! personnumer måste vara 10 eller 12 siffror.");
+		}*/
+}
+catch(err) {
+	message.innerHTML = "Input is: " + err;
+}
 }
 
 function myFunction2() {
