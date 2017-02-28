@@ -1,5 +1,6 @@
 body{
-	background-image: url(../resource/congruent_pentagon.png);
+	background-image:	/*källan:https://www.toptal.com/designers/subtlepatterns/*/
+		url(../resource/congruent_pentagon.png);
 }
 *{
 	margin: 5px;
@@ -23,6 +24,7 @@ body{
 }
 
 header {
+	/*källa:https://www.toptal.com/designers/subtlepatterns/*/
 	background-image:url(../resource/food.png); 
 	color:black; 
 	border: 1px solid darkgreen;
@@ -85,7 +87,7 @@ figure{
 	text-align: center;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 500px) {
 	.navmain {
 		text-align:left;
 		flex:1 auto;
@@ -99,6 +101,7 @@ figure{
 		order:3;
 	}
 }
+
 body{ 
 	margin: 20px; 
 }
@@ -106,7 +109,8 @@ h1 {
 	font-size: 1.5em; 
 	margin: 10px; 
 }
-/*Star Rating*/
+/*Star Rating
+källan: http://code.stephenmorley.org/html-and-css/star-rating-widget/*/
 
 .starRating:not(old){
 	display        : inline-block;
